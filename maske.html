@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oprema za mobitele - Maske za mobitele</title>
+    <link rel="stylesheet" type="text/css" href="./styles/stil.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allura&display=swap">
+</head>
+<body>
+    <header>
+        <h1>Kvalitetna oprema za vaš mobitel</h1>
+    </header>
+    <nav>
+        <a href="index.html">Početna</a>
+        <a href="maske.html">Maske za mobitele</a>
+        <a href="zastite.html">Zaštite za ekran</a>
+        <a href="drzaci.html">Držači za mobitele</a>
+        <a href="punjaci.html">Punjači</a>
+        <a href="foto.html">Oprema za fotografiju</a>
+        <a href="gaming.html">Gaming oprema</a>
+        <div class="right-items">
+            <span class="line"></span>
+            <a href="racun.html">Moj račun</a>
+            <span class="line"></span>
+            <a href="kontakt.html">Kontaktirajte nas</a>
+            <span class="line"></span>
+            <div id="shopping-card" title="Košarica">
+              <i class="fas fa-shopping-cart"></i>
+              <div id="shopping-count">0</div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+      <p class="numbers">1</p>
+      <h3 class="text">Odaberite vrstu maske</h3>
+    </div>
+    
+    <section class="case-subpage">
+        <div class="case-panel" id="Silikonskamaska">
+            <a href="#" onclick="selectPanel('Silikonskamaska')">
+                <h2>Silikonske maske</h2>
+                <img src="slike/silikonske.jpg" alt="Silikonske maske">
+                <h3>12 €</h3>
+            </a>
+        </div>
+        <div class="case-panel" id="Plastičnamaska">
+            <a href="#" onclick="selectPanel('Plastičnamaska')">
+                <h2>Plastične maske</h2>
+                <img src="slike/plasticne.jpg" alt="Plastične maske">
+                <h3>10 €</h3>
+            </a>
+        </div>
+        <div class="case-panel" id="Flipmaska">
+            <a href="#" onclick="selectPanel('Flipmaska')">
+                <h2>Flip maske</h2>
+                <img src="slike/flip.jpg" alt="Flip case">
+                <h3>15 €</h3>
+            </a>
+        </div>
+    </section>
+
+    <div class="container">
+      <p class="numbers">2</p>
+      <h3 class="text">Odaberite tip mobitela</h3>
+    </div>
+    
+    <div class="custom-select">
+      <select id="select">
+        <option value="0" selected>Odaberite tip mobitela</option>
+        <option value="1">Apple iPhone 15</option>
+        <option value="2">Apple iPhone 14</option>
+        <option value="3">Apple iPhone 13</option>
+        <option value="4">Samsung Galaxy A serija</option>
+        <option value="5">Samsung Galaxy S serija</option>
+        <option value="6">Google Pixel 8</option>
+        <option value="7">Google Pixel 7</option>
+        <option value="8">Xiaomi Redmi Note 13</option>
+        <option value="9">Xiaomi Redmi Note 12</option>
+        <option value="10">Xiaomi Redmi Note 11</option>
+        <option value="11">OnePlus 12</option>
+        <option value="12">OnePlus 11</option>
+      </select>
+    </div>
+    
+    <span class="message_k">Vašeg mobitela nema u izborniku?</span>
+    <a class="button" id="kontaktbtn" href="kontakt.html">Kontaktirajte nas</a>
+
+
+    <div class="container">
+      <p class="numbers">3</p>
+      <h3 class="text">Odaberite boju</h3>
+    </div>
+
+    <div class="color-selector">
+      <div class="color-dot" onclick="selectColor('bijela')"></div>
+      <div class="color-dot" onclick="selectColor('siva')"></div>
+      <div class="color-dot" onclick="selectColor('crna')"></div>
+      <div class="color-dot" onclick="selectColor('žuta')"></div>
+      <div class="color-dot" onclick="selectColor('narančasta')"></div>
+      <div class="color-dot" onclick="selectColor('crvena')"></div>
+      <div class="color-dot" onclick="selectColor('roza')"></div>
+      <div class="color-dot" onclick="selectColor('plava')"></div>
+      <div class="color-dot" onclick="selectColor('zelena')"></div>
+    </div>
+    
+    <div class="final-selection">
+      <div class="container">
+        <p class="numbers">4</p>
+        <h3 class="text">Vaš odabir: </h3>
+      </div>
+      <div class="fin">
+        <p id="selected-case">Vrsta maske: -</p>
+        <p id="selected-phone">Tip mobitela: -</p>
+        <p id="selected-color">Boja: -</p>
+        <p id="selected-price">Cijena: -</p>
+        <button class="button" id="finbtn">Dodajte u košaricu    <i class="fas fa-shopping-cart"></i></button>
+      </div>
+    </div>
+
+    <div id="popup" class="popup">
+      Predmet dodan u košaricu
+    </div>
+
+    
+    
+    <footer>
+        <div id="footer-box" class="container">
+          <ul id="social-media-list">
+            <li title="Facebook">
+              <a
+                class="social-media-links"
+                href="https://www.facebook.com/"
+                target="_blank"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li title="Instagram">
+              <a
+                class="social-media-links"
+                href="https://www.instagram.com/"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li title="Email">
+              <a class="social-media-links" href="mailto:myemail@fesb.hr">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+          </ul>
+          <p id="copyright">
+            &copy;<em> 2024, Sva prava pridržana</em> <br />
+            <strong>Mario Šatara</strong>
+          </p>
+        </div>
+    </footer>
+
+    <div id="shopping-side-menu">
+      <div id="side-menu-items"></div>
+      <div id="side-menu-action">
+        <div class="total-price">
+          <span>Ukupna cijena:</span> <em>0,00</em>
+        </div>
+        <button>Naruči</button>
+      </div>
+      <div id="info"></div>
+    </div>
+
+    
+
+    <script src="./js/skripta.js"></script>
+</body>
+</html>

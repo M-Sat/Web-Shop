@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oprema za mobitele</title>
+    <link rel="stylesheet" type="text/css" href="./styles/stil.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allura&display=swap">
+</head>
+<body>
+  <header>
+      <h1>Kvalitetna oprema za vaš mobitel</h1>
+  </header>
+  <nav>
+      <a href="index.html">Početna</a>
+      <a href="maske.html">Maske za mobitele</a>
+      <a href="zastite.html">Zaštite za ekran</a>
+      <a href="drzaci.html">Držači za mobitele</a>
+      <a href="punjaci.html">Punjači</a>
+      <a href="foto.html">Oprema za fotografiju</a>
+      <a href="gaming.html">Gaming oprema</a>
+      <div class="right-items">
+          <span class="line"></span>
+          <a href="racun.html">Moj račun</a>
+          <span class="line"></span>
+          <a href="kontakt.html">Kontaktirajte nas</a>
+          <span class="line"></span>
+          <div id="shopping-card" title="Košarica">
+              <i class="fas fa-shopping-cart"></i>
+              <div id="shopping-count">0</div>
+          </div>
+      </div>
+  </nav>
+  
+  <section>
+      <h2>Proizvodi na akciji</h2>
+      <div class="flex-container">
+          <div class="left-column">
+              <div class="slideshow">
+                  <img class="slide" src="slike/akcija1.jpg" alt="Sale Image 1">
+                  <img class="slide" src="slike/akcija2.jpg" alt="Sale Image 2">
+                  <img class="slide" src="slike/akcija3.jpg" alt="Sale Image 3">
+                  <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                  <a class="next" onclick="changeSlide(1)">&#10095;</a>
+              </div>
+              <div style="text-align:center">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+              </div>
+          </div>
+          <div class="right-column">
+              <div class="right-column-text">
+                  <p id="slide-text"></p>
+                  <button class="button" onclick="addToCart2()">
+                      <i class="fas fa-shopping-cart"></i> Dodajte u košaricu
+                  </button>                    
+              </div>
+          </div>
+      </div>
+  </section>
+
+  
+
+  <section>
+      <h2>Svi proizvodi</h2>
+      <div class="product">
+          <div class="product-item">
+              <a href="maske.html">
+                  <img id="maske" src="slike/maske.jpg" alt="Phone Case 1" >
+                  <h3>Maske za mobitele</h3>
+                  <p>Zaštitite mobilni uređaj kvalitetnom i modernom maskom za mobitel.</p>
+              </a>
+          </div>
+          <div class="product-item">
+              <a href="zastite.html">
+                  <img id="zastite" src="slike/zastita.jpg" alt="Screen Protector 1">
+                  <h3>Zaštite za ekran</h3>
+                  <p>Zaštita za ekran mobilnih uređaja čuva vaš zaslon od ogrebotina i oštećenja, čuvajući kristalnu jasnoću prikaza.</p>
+              </a>
+          </div>
+          <div class="product-item">
+              <a href="drzaci.html">
+                  <img id="drzaci" src="slike/drzac.jpg" alt="Phone Case 1">
+                  <h3>Držači za mobitele</h3>
+                  <p>Držači za mobitele omogućuju sigurno i praktično postavljanje vašeg uređaja na različite površine.</p>
+              </a>
+          </div>
+          <div class="product-item">
+              <a href="punjaci.html">
+                  <img id="punjaci" src="slike/bezicni.jpg" alt="Phone Case 1" >
+                  <h3>Punjači</h3>
+                  <p>Uz brze i prijenosne punjače vaši mobilni uređaji nikada neće ostati prazne baterije.</p>
+              </a>
+          </div>
+          <div class="product-item">
+              <a href="foto.html">
+                  <img id="foto" src="slike/foto1.jpg" alt="Screen Protector 1">
+                  <h3>Oprema za fotografiju</h3>
+                  <p>Korisna oprema za poboljšanje kvalitete i performansi vaših fotografija i videa.</p>
+              </a>
+          </div>
+          <div class="product-item">
+              <a href="gaming.html">
+                  <img id="gaming" src="slike/gaming.jpg" alt="Phone Case 1">
+                  <h3>Gaming oprema</h3>
+                  <p>Koristite vaš mobilni uređaj kao gaming konzolu uz našu gaming opremu.</p>
+              </a>
+          </div>
+      </div>
+  </section>
+  
+  <div id="shopping-side-menu">
+      <div id="side-menu-items"></div>
+      <div id="side-menu-action">
+        <div class="total-price">
+          <span>Ukupna cijena:</span> <em>0,00</em>
+        </div>
+        <button>Naruči</button>
+      </div>
+      <div id="info"></div>
+    </div>
+
+  <div id="popup" class="popup">
+    Predmet dodan u košaricu
+  </div>
+
+  <footer>
+      <div id="footer-box" class="container">
+        <ul id="social-media-list">
+          <li title="Facebook">
+            <a
+              class="social-media-links"
+              href="https://www.facebook.com/"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li title="Instagram">
+            <a
+              class="social-media-links"
+              href="https://www.instagram.com/"
+              target="_blank"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li title="Email">
+            <a class="social-media-links" href="mailto:myemail@fesb.hr">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+        <p id="copyright">
+          &copy;<em> 2024, Sva prava pridržana</em> <br />
+          <strong>Mario Šatara</strong>
+        </p>
+      </div>
+  </footer>
+  <script src="./js/skripta.js"></script>
+</body>
+</html>
